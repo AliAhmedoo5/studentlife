@@ -6,6 +6,7 @@ export default function BudgetSettings({ data, onUpdateIncome, onUpdateCategory,
   const [newCatLimit, setNewCatLimit] = useState('');
   const [newCatThreshold, setNewCatThreshold] = useState('80');
   const [statusMsg, setStatusMsg] = useState('');
+  const [showResetConfirm, setShowResetConfirm] = useState(false);
 
   const handleIncomeSubmit = (e) => {
     e.preventDefault();
@@ -50,10 +51,17 @@ export default function BudgetSettings({ data, onUpdateIncome, onUpdateCategory,
   };
 
   const handleResetClick = () => {
-    if (window.confirm('WARNING: This will permanently delete all your logged expenses, custom budgets, savings goals, and chats. This action cannot be undone. Do you want to proceed?')) {
-      onResetData();
-      alert('All local finance data has been deleted.');
-    }
+    setShowResetConfirm(true);
+  };
+
+  const confirmReset = () => {
+    setShowResetConfirm(false);
+    onResetData();
+    showStatus('All local finance data has been deleted.');
+  };
+
+  const cancelReset = () => {
+    setShowResetConfirm(false);
   };
 
   return (
@@ -175,6 +183,23 @@ export default function BudgetSettings({ data, onUpdateIncome, onUpdateCategory,
           </div>
         </div>
       </div>
+
+      {/* Custom Reset Confirmation Modal */}
+      {showResetConfirm && (
+        <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(5px)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 9999 }}>
+          <div className="glass-card" style={{ maxWidth: '400px', width: '90%', textAlign: 'center', borderTop: '4px solid var(--color-danger)' }}>
+            <div style={{ fontSize: '3rem', marginBottom: '1rem', lineHeight: 1 }}>⚠️</div>
+            <h3 style={{ marginBottom: '1rem', fontWeight: 700 }}>Are you absolutely sure?</h3>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginBottom: '2rem' }}>
+              This will permanently delete all your logged expenses, custom budgets, savings goals, and clear your SQLite database. This action cannot be undone!
+            </p>
+            <div style={{ display: 'flex', gap: '1rem' }}>
+              <button className="btn-secondary" onClick={cancelReset}>Cancel</button>
+              <button className="btn-primary" style={{ background: 'var(--color-danger)', boxShadow: 'var(--glow-danger)' }} onClick={confirmReset}>Yes, Delete Everything</button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
