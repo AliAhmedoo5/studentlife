@@ -78,7 +78,7 @@ export default function BudgetSettings({ data, onUpdateIncome, onUpdateCategory,
             <h3 style={{ marginBottom: '1rem', fontWeight: 600 }}>Monthly Allowance</h3>
             <form onSubmit={handleIncomeSubmit}>
               <div className="form-group">
-                <label className="form-label">Allowance Amount ($)</label>
+                <label className="form-label">Allowance Amount (Rs)</label>
                 <input 
                   type="number" 
                   step="0.01"
@@ -159,7 +159,7 @@ export default function BudgetSettings({ data, onUpdateIncome, onUpdateCategory,
               <div key={cat.name} className="list-item" style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr 1fr', gap: '1rem', alignItems: 'center' }}>
                 <div style={{ fontWeight: 600 }}>{cat.name}</div>
                 <div className="form-group" style={{ marginBottom: 0 }}>
-                  <span className="form-label" style={{ fontSize: '0.75rem' }}>Limit ($)</span>
+                  <span className="form-label" style={{ fontSize: '0.75rem' }}>Limit (Rs)</span>
                   <input 
                     type="number" 
                     className="form-input" 

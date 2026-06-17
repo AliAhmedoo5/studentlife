@@ -71,7 +71,7 @@ export default function SavingsGoals({ data, onAddGoal, onContributeGoal }) {
                 </div>
 
                 <div className="form-group">
-                  <label className="form-label">Amount ($)</label>
+                  <label className="form-label">Amount (Rs)</label>
                   <input 
                     type="number" 
                     step="0.01" 
@@ -128,7 +128,7 @@ export default function SavingsGoals({ data, onAddGoal, onContributeGoal }) {
               </div>
 
               <div className="form-group">
-                <label className="form-label">Target Amount ($)</label>
+                <label className="form-label">Target Amount (Rs)</label>
                 <input 
                   type="number" 
                   placeholder="0.00"
@@ -179,12 +179,12 @@ export default function SavingsGoals({ data, onAddGoal, onContributeGoal }) {
                     <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
                       <span style={{ fontWeight: 600, fontSize: '1.05rem' }}>{g.name}</span>
                       <span className="badge success" style={{ background: 'rgba(16, 185, 129, 0.1)' }}>
-                        Target: ${g.target.toFixed(2)}
+                        Target: Rs {g.target.toFixed(2)}
                       </span>
                     </div>
 
                     <div style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '0.75rem', display: 'flex', justifyContent: 'space-between' }}>
-                      <span>Saved: <strong>${g.current.toFixed(2)}</strong> (${remaining.toFixed(2)} left)</span>
+                      <span>Saved: <strong>Rs {g.current.toFixed(2)}</strong> (Rs {remaining.toFixed(2)} left)</span>
                       <span>Deadline: {g.deadline}</span>
                     </div>
 

@@ -10,7 +10,7 @@
 
 Students manage small, irregular budgets from allowances or part-time jobs. They often lose track of spending on food, transport, subscriptions, and entertainment. Manual tracking is boring and gets abandoned quickly. This app solves that by giving students a fast, private budgeting tool that:
 
-- Lets them log expenses rapidly by typing natural phrases (e.g., *"pizza $12 yesterday"*) using a smart local text parser.
+- Lets them log expenses rapidly by typing natural phrases (e.g., *"pizza Rs 12 yesterday"*) using a smart local text parser.
 - Automatically guesses the spending category based on keywords and lets the student correct it.
 - Shows how much budget is left in each category with visual progress bars.
 - Predicts if they will run out of money before the month ends based on daily spending velocity.
@@ -116,9 +116,9 @@ erDiagram
 | Table | Purpose | Example Data |
 |:------|:--------|:-------------|
 | `settings` | Stores key-value configs like monthly income | `key: "income"`, `value: "1200"` |
-| `categories` | Budget buckets with spending limits and warning thresholds | Food ($300 limit, warn at 80%) |
-| `expenses` | Every transaction the student logs | Pizza $24, category: Food, date: 2026-06-15 |
-| `saving_goals` | Long-term savings targets with progress tracking | "New Laptop", target: $900, saved: $250 |
+| `categories` | Budget buckets with spending limits and warning thresholds | Food (Rs 300 limit, warn at 80%) |
+| `expenses` | Every transaction the student logs | Pizza Rs 24, category: Food, date: 2026-06-15 |
+| `saving_goals` | Long-term savings targets with progress tracking | "New Laptop", target: Rs 900, saved: Rs 250 |
 
 ---
 
@@ -160,12 +160,12 @@ Open `http://localhost:5173` in your browser.
 
 Follow this path to demonstrate the complete workflow to judges:
 
-1. **Open the Dashboard** → See default monthly income ($0), zero spending, and no category progress bars.
+1. **Open the Dashboard** → See default monthly income (Rs 0), zero spending, and no category progress bars.
 2. **Go to "Settings"** → Set your monthly income and add a few custom categories (e.g., Food, Transport).
-3. **Go to "Log Expenses"** → Type *"pizza party yesterday 25"* in the natural language box → Click **Parse** → The local regex system extracts amount ($25), category (Food), and description → **Review it, correct if needed**, then click **Confirm & Save**.
+3. **Go to "Log Expenses"** → Type *"pizza party yesterday 25"* in the natural language box → Click **Parse** → The local regex system extracts amount (Rs 25), category (Food), and description → **Review it, correct if needed**, then click **Confirm & Save**.
 4. **Check the Dashboard again** → The progress bar has increased. If it crosses the 80% warning threshold, a yellow alert banner appears at the top.
 5. **Check the Forecast** → The Dashboard shows the predicted month-end balance based on your average daily spending speed.
-6. **Go to "Savings Goals"** → Create a goal for "New Laptop" ($900 target) → Add a $50 contribution.
+6. **Go to "Savings Goals"** → Create a goal for "New Laptop" (Rs 900 target) → Add a Rs 50 contribution.
 7. **Go to "Monthly Report"** → See total transactions, average expense size, top spending day, category breakdown table, and automated savings tips calculated from real data.
 
 ---

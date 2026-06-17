@@ -82,15 +82,15 @@ export default function Dashboard({ data, onAddExpense, alerts }) {
       <div className="dashboard-grid">
         <div className="glass-card card-stat">
           <span className="stat-label">Monthly Income</span>
-          <span className="stat-value income">${data.income.toFixed(2)}</span>
+          <span className="stat-value income">Rs {data.income.toFixed(2)}</span>
         </div>
         <div className="glass-card card-stat">
           <span className="stat-label">Total Spent</span>
-          <span className="stat-value spent">${totalSpent.toFixed(2)}</span>
+          <span className="stat-value spent">Rs {totalSpent.toFixed(2)}</span>
         </div>
         <div className="glass-card card-stat">
           <span className="stat-label">Remaining Balance</span>
-          <span className="stat-value remaining">${remaining.toFixed(2)}</span>
+          <span className="stat-value remaining">Rs {remaining.toFixed(2)}</span>
         </div>
       </div>
 
@@ -109,7 +109,7 @@ export default function Dashboard({ data, onAddExpense, alerts }) {
                   <div className="progress-header">
                     <span style={{ fontWeight: 500 }}>{cat.name}</span>
                     <span style={{ color: 'var(--text-secondary)' }}>
-                      ${spent.toFixed(2)} / ${cat.limit} ({pct.toFixed(0)}%)
+                      Rs {spent.toFixed(2)} / Rs {cat.limit} ({pct.toFixed(0)}%)
                     </span>
                   </div>
                   <div className="progress-track">
@@ -130,22 +130,22 @@ export default function Dashboard({ data, onAddExpense, alerts }) {
           <div className="glass-card">
             <h3 style={{ marginBottom: '0.75rem', fontWeight: 600 }}>Month-End Forecast</h3>
             <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginBottom: '1rem' }}>
-              We project your spending speed using your average daily spend of <strong>${averageDailySpend.toFixed(2)}</strong> (Day {dayOfMonth}/{daysInMonth}).
+              We project your spending speed using your average daily spend of <strong>Rs {averageDailySpend.toFixed(2)}</strong> (Day {dayOfMonth}/{daysInMonth}).
             </p>
             <div style={{ padding: '1rem', borderRadius: 'var(--radius-md)', background: 'rgba(255, 255, 255, 0.02)', border: '1px solid var(--border-glass)', marginBottom: '1rem' }}>
               <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', textTransform: 'uppercase' }}>Projected Month-End Balance</div>
               <div style={{ fontSize: '1.75rem', fontWeight: 700, color: isOverprojected ? 'var(--color-danger)' : 'var(--color-success)' }}>
-                ${projectedBalance.toFixed(2)}
+                Rs {projectedBalance.toFixed(2)}
               </div>
             </div>
             <p style={{ fontSize: '0.85rem', lineHeight: '1.4' }}>
               {isOverprojected ? (
                 <span style={{ color: 'var(--color-danger)' }}>
-                  ⚠️ <strong>Overspending risk:</strong> At this rate, you will exceed your allowance by <strong>${Math.abs(projectedBalance).toFixed(2)}</strong>. Try cutting down variable expenses.
+                  ⚠️ <strong>Overspending risk:</strong> At this rate, you will exceed your allowance by <strong>Rs {Math.abs(projectedBalance).toFixed(2)}</strong>. Try cutting down variable expenses.
                 </span>
               ) : (
                 <span style={{ color: 'var(--color-success)' }}>
-                  🎉 <strong>On track!</strong> At your current rate, you will save approximately <strong>${projectedBalance.toFixed(2)}</strong> this month.
+                  🎉 <strong>On track!</strong> At your current rate, you will save approximately <strong>Rs {projectedBalance.toFixed(2)}</strong> this month.
                 </span>
               )}
             </p>
@@ -168,7 +168,7 @@ export default function Dashboard({ data, onAddExpense, alerts }) {
               </div>
               <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: '0.75rem' }}>
                 <div className="form-group">
-                  <label className="form-label">Amount ($)</label>
+                  <label className="form-label">Amount (Rs)</label>
                   <input 
                     type="number" 
                     step="0.01" 

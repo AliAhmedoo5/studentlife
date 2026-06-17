@@ -70,15 +70,15 @@ export default function MonthlyReport({ data }) {
   const optimizationTips = [
     {
       title: "Variable Cost Audit (Food & Entertainment)",
-      detail: `Your variable expenses total $${((categorySummary['Food']?.spent || 0) + (categorySummary['Entertainment']?.spent || 0)).toFixed(2)}. Preparing lunch at home and planning social activities around student discounts can reduce this by 40%.`
+      detail: `Your variable expenses total Rs ${((categorySummary['Food']?.spent || 0) + (categorySummary['Entertainment']?.spent || 0)).toFixed(2)}. Preparing lunch at home and planning social activities around student discounts can reduce this by 40%.`
     },
     {
       title: "Subscription Pruning",
-      detail: `You've spent $${(categorySummary['Subscriptions']?.spent || 0).toFixed(2)} on monthly subscriptions. Deactivating one streaming platform for a month can save you over $15 directly.`
+      detail: `You've spent Rs ${(categorySummary['Subscriptions']?.spent || 0).toFixed(2)} on monthly subscriptions. Deactivating one streaming platform for a month can save you over Rs 1500 directly.`
     },
     {
       title: "Buffer Management",
-      detail: `Keep a minimum $50 emergency buffer in your allowance account to avoid dipping into credit or borrow lines for unexpected transport/medical expenses.`
+      detail: `Keep a minimum Rs 5000 emergency buffer in your allowance account to avoid dipping into credit or borrow lines for unexpected transport/medical expenses.`
     }
   ];
 
@@ -96,14 +96,14 @@ export default function MonthlyReport({ data }) {
           <span className="stat-value remaining" style={{ color: 'var(--color-purple)' }}>{transactionCount}</span>
         </div>
         <div className="glass-card card-stat">
-          <span className="stat-label">Average Expense Size</span>
-          <span className="stat-value remaining">${averageSpend.toFixed(2)}</span>
+          <span className="stat-label">Daily Average</span>
+          <span className="stat-value remaining">Rs {averageSpend.toFixed(2)}</span>
         </div>
         <div className="glass-card card-stat">
           <span className="stat-label">Top Spending Day</span>
           <span className="stat-value spent" style={{ fontSize: '1.2rem', padding: '0.8rem 0', fontWeight: 600 }}>
             {formatNiceDate(topDay)}<br/>
-            <span style={{ fontSize: '1rem', color: 'var(--text-secondary)' }}>(${topDayAmount.toFixed(2)})</span>
+            <span style={{ fontSize: '1rem', color: 'var(--text-secondary)' }}>(Rs {topDayAmount.toFixed(2)})</span>
           </span>
         </div>
       </div>
@@ -130,9 +130,9 @@ export default function MonthlyReport({ data }) {
                     <tr key={name}>
                       <td style={{ fontWeight: 600 }}>{name}</td>
                       <td style={{ color: val.spent > 0 ? 'var(--color-danger)' : 'var(--text-muted)' }}>
-                        ${val.spent.toFixed(2)}
+                        Rs {val.spent.toFixed(2)}
                       </td>
-                      <td style={{ color: 'var(--text-secondary)' }}>${val.limit}</td>
+                      <td style={{ color: 'var(--text-secondary)' }}>Rs {val.limit}</td>
                       <td>{val.count}</td>
                       <td>
                         <span className={`badge ${pct >= 100 ? 'danger' : pct >= 80 ? 'warning' : 'success'}`} style={{ fontSize: '0.7rem' }}>
@@ -155,7 +155,7 @@ export default function MonthlyReport({ data }) {
             <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', textTransform: 'uppercase' }}>Highest Cost Driver</div>
             <div style={{ fontSize: '1.35rem', fontWeight: 700, color: 'var(--color-danger)' }}>{peakCategory}</div>
             <div style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginTop: '0.25rem' }}>
-              Totaling <strong>${peakAmount.toFixed(2)}</strong>. This is <strong>{totalSpent > 0 ? ((peakAmount/totalSpent)*100).toFixed(0) : 0}%</strong> of your entire monthly spending.
+              Totaling <strong>Rs {peakAmount.toFixed(2)}</strong>. This is <strong>{totalSpent > 0 ? ((peakAmount/totalSpent)*100).toFixed(0) : 0}%</strong> of your entire monthly spending.
             </div>
           </div>
 

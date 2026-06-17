@@ -131,7 +131,7 @@ export default function ExpenseTracker({ data, onAddExpense, onDeleteExpense, sh
           <div className="glass-card" style={{ borderLeft: '4px solid var(--color-cyan)' }}>
             <h3 style={{ marginBottom: '0.5rem', fontWeight: 600 }}>Log with Natural Language</h3>
             <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginBottom: '1rem' }}>
-              Type an expense naturally: e.g. <em>"Netflix cost 15.49 today"</em> or <em>"bus ticket $3 yesterday"</em>.
+              Type an expense naturally: e.g. <em>"Netflix cost 1500 today"</em> or <em>"bus ticket Rs 300 yesterday"</em>.
             </p>
             <form onSubmit={handleNlpParse} style={{ display: 'flex', gap: '0.5rem', marginBottom: '1rem' }}>
               <input 
@@ -167,7 +167,7 @@ export default function ExpenseTracker({ data, onAddExpense, onDeleteExpense, sh
                   
                   <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: '0.5rem' }}>
                     <div className="form-group" style={{ marginBottom: 0 }}>
-                      <label className="form-label" style={{ fontSize: '0.7rem' }}>Amount ($)</label>
+                      <label className="form-label" style={{ fontSize: '0.7rem' }}>Amount (Rs)</label>
                       <input 
                         type="number" 
                         step="0.01"
@@ -224,7 +224,7 @@ export default function ExpenseTracker({ data, onAddExpense, onDeleteExpense, sh
               
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: '0.5rem' }}>
                 <div className="form-group">
-                  <label className="form-label">Amount ($)</label>
+                  <label className="form-label">Amount (Rs)</label>
                   <input 
                     type="number" 
                     step="0.01" 
@@ -295,7 +295,7 @@ export default function ExpenseTracker({ data, onAddExpense, onDeleteExpense, sh
                     </div>
                   </div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                    <span style={{ fontWeight: 600, color: 'var(--color-danger)' }}>-${exp.amount.toFixed(2)}</span>
+                    <span style={{ fontWeight: 600, color: 'var(--color-danger)' }}>-Rs {exp.amount.toFixed(2)}</span>
                     <button 
                       onClick={() => onDeleteExpense(exp.id)}
                       style={{ background: 'transparent', border: 'none', color: 'var(--text-muted)', cursor: 'pointer', transition: 'var(--transition-smooth)' }}
