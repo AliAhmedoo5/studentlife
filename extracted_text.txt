@@ -1,0 +1,809 @@
+
+DEVELOPMENT HACKATHON
+Participant Challenge Handbook
+Build a real system, not a shallow demo.
+
+Document Type
+Participant-facing challenge document
+Audience
+Hackathon participants, mentors, organizers, and preliminary reviewers
+Technology
+.NET, Java, Python, JavaScript, mobile, desktop, cloud, AI/Agentic AI allowed etc.
+Project Count
+5 selected challenge tracks
+Core Goal
+Force students to build maintainable MVP systems with workflow, architecture, data, and demo readiness
+Prepared for Hackathon Participants
+
+TEAM INFORMATION FORM
+To be filled by the team before final submission/evaluation. Use clear handwriting or typed text.
+Field
+Team Response
+Team Name
+
+Selected Project No. (1-5)
+
+Selected Project Title
+
+Technology Stack
+
+Repository Link / Source Code Link
+
+Demo Type / Demo Link / Local Setup Notes
+
+AI Used? (Yes/No) + Tool Names
+
+
+No.
+Role
+Name
+Roll No. / ID
+Contact
+Signature
+1
+Team Lead
+
+
+
+
+2
+Member 2
+
+
+
+
+3
+Member 3
+
+
+
+
+4
+Member 4 (optional)
+
+
+
+
+5
+Member 5 (optional)
+
+
+
+
+
+Team Declaration
+We confirm that the submitted work is our team's work, external resources are credited, AI usage is declared, and we can explain the project code, architecture, and limitations during evaluation.
+Team Lead Signature: ____________________________      Date: ____________________
+
+Document Overview
+This handbook explains the selected hackathon project tracks, MVP expectations, submission package, AI usage policy, and the evaluation pipeline. Each team must choose one project track and build a working MVP that demonstrates a complete real-world workflow.
+Project Track Index
+Project
+Title
+Domain
+1
+Disaster Response and Flood Relief Coordination Platform
+Emergency Response / Climate Resilience
+2
+Agentic Personal Finance and Micro-Budgeting System for Students
+FinTech / Student Life
+3
+Agentic Legal Aid and Document Assistant
+LegalTech / Document Intelligence
+4
+Mental Health Early Support and Referral Platform
+Student Wellbeing / Safety-Critical AI
+5
+Blood Donation Emergency Matching System
+Health Logistics / Emergency Matching
+1. Event Objective
+The objective of this hackathon is to challenge students to design and develop practical software systems for real-world problems. Teams are expected to build a working MVP that demonstrates one complete end-to-end workflow, clean code organization, meaningful database design, role-based features where needed, and clear explanation of technical decisions.
+This is not a UI-only competition. A smaller system with clean architecture and one strong workflow is better than a large half-broken demo.
+2. Technology Rules
+Teams may use any development stack: .NET, Java, Python, JavaScript, PHP, mobile frameworks, desktop frameworks, cloud services, databases, or open-source tools.
+Teams may build web apps, mobile apps, desktop apps, APIs, hybrid systems, or full-stack solutions.
+Database persistence is expected. In-memory-only demos are not acceptable for projects that clearly require stored data.
+External APIs and open-source libraries are allowed, but they must be credited in the README.
+Hard-coded secrets, API keys, passwords, or production credentials are not allowed.
+A deployed link is optional. A locally runnable project is acceptable if setup instructions are clear.
+3. Project Selection Rules
+Each team must select exactly one project from the five official tracks in this document.
+Teams may not merge multiple project tracks unless the organizing team explicitly allows it.
+Teams may reduce scope, but the required MVP workflow for the selected track must be completed.
+Teams must clearly state what is completed, what is mocked, and what is future scope.
+Teams should avoid generic CRUD-only implementation. The submitted system must show workflow, roles, data, and business logic.
+
+4. What MVP Means in This Hackathon
+MVP means Minimum Viable Product: a small but complete working version of the system that solves the core problem through one proper end-to-end workflow.
+Weak MVP
+Strong MVP
+Only login, dashboard, and static cards
+A user completes a real workflow and data changes persist
+Forms submit to nowhere
+Forms validate input and save records to database/local storage
+Fake charts with hard-coded numbers
+Dashboard uses actual records created during demo
+AI chatbot with random answers
+AI output is reviewable, explainable, and connected to workflow
+No README or setup steps
+Anyone can run the project using the README
+5. Evaluation Pipeline
+Evaluation will happen in stages. This prevents flashy but incomplete demos from unfairly beating serious engineering work.
+Stage 1: Submission Compliance Check
+Repository link or source code is submitted.
+README and setup instructions are present.
+Required diagrams and project summary are included.
+Demo credentials or sample data are provided if login is required.
+AI usage declaration is provided.
+Stage 2: MVP Acceptance Gate
+This stage is pass/fail. If the project does not pass the MVP gate, it may still receive participation acknowledgement, but it should not move to final judge scoring.
+Requirement
+Pass Condition
+Working application
+Application runs without fatal errors during basic demo
+Core workflow
+At least one complete end-to-end workflow works
+Data persistence
+Data is stored in database, local database, file storage, or documented persistent storage
+Validation
+Important inputs are validated on client and/or server side
+Project structure
+Code is organized into meaningful folders/modules, not dumped into one file
+README
+Setup steps, features, credentials, and limitations are documented
+Security basics
+No exposed secrets; role checks where multiple roles exist
+AI responsibility
+AI output is not blindly trusted in high-risk domains
+Stage 3: Final Judge Evaluation
+Only MVP-accepted teams will proceed to full judge evaluation. Final judging should consider functionality, architecture, code quality, database design, maintainability, UI/UX, security, AI responsibility, real-world impact, and demo clarity.
+
+6. Required Submission Package
+Submission Item
+Required?
+Notes
+Working application
+Yes
+Local, deployed, mobile APK, desktop app, or runnable full-stack project
+GitHub/GitLab repository
+Yes
+Should include readable folder structure and commit history where possible
+README file
+Yes
+Setup, run instructions, architecture, environment variables, demo credentials
+Architecture diagram
+Yes
+Frontend, backend, database, AI service, file storage, integrations
+Database schema / ERD
+Yes
+Main entities and relationships
+Project summary
+Yes
+Problem, users, MVP scope, completed modules, future scope
+AI usage declaration
+Yes
+Tools used, generated parts, AI features, mocked AI parts if any
+Known limitations
+Yes
+Clearly mention incomplete, mocked, or future work
+Test cases / validation proof
+Recommended
+Unit tests, screenshots, sample validation cases, or testing notes
+Demo video
+Optional
+Useful backup if live demo fails
+7. AI Usage Policy
+AI tools are allowed for coding assistance, documentation, UI support, test generation, and optional AI-powered product features. However, AI-generated boilerplate alone is not a valid project.
+Teams must understand and explain their code.
+AI-generated code must be reviewed, cleaned, and integrated properly.
+AI output inside the product must be editable, rejectable, or reviewable by a human user.
+AI must not make final decisions in legal, mental health, medical, emergency, or financial contexts.
+Mocked AI responses are allowed only if clearly declared as mocked.
+Teams must not claim that an AI system is a doctor, lawyer, therapist, emergency officer, or financial advisor.
+Any AI feature must show where the input comes from and how the output affects the workflow.
+8. General Technical Expectations
+Use clear folder/module structure.
+Separate UI, business logic, data access, and external integrations.
+Use configuration files or environment variables instead of hard-coded secrets.
+Use role-based authorization where multiple user types exist.
+Use meaningful database entities and relationships.
+Use status/state transitions for workflows such as incidents, requests, referrals, or reviews.
+Use audit logs for sensitive actions where practical.
+Handle common error cases gracefully.
+Seed sample data for demo if needed.
+Keep README honest: completed, mocked, limitations, and future scope.
+
+Project 1: Disaster Response and Flood Relief Coordination Platform
+Domain
+Emergency Response / Climate Resilience
+Expected Build Type
+Web app, mobile app, desktop app, or hybrid system with an API backend
+AI Status
+Allowed, but controlled, explainable, and optional where possible
+MVP Rule
+One complete end-to-end workflow must work with real data persistence
+1. Problem Statement
+During floods, heatwaves, or urban emergencies, reports often spread through calls and social media without verification, prioritization, or coordination. The challenge is to create a platform that collects citizen reports, verifies severity, manages volunteers, tracks relief supplies, and gives coordinators a command-center view.
+2. Target Users / Roles
+Affected citizen or field reporter
+Volunteer or rescue worker
+NGO coordinator
+Government/relief officer
+Supply warehouse manager
+System administrator
+3. Challenge Goal
+Build a disaster coordination system that turns scattered emergency reports into verified, assigned, trackable relief cases with inventory and status visibility.
+4. Required MVP Workflow
+Citizen or field worker submits an incident with location, category, severity, affected-person count, and optional media evidence.
+System checks for nearby duplicate reports and calculates basic priority.
+Coordinator verifies, rejects, merges, or escalates the report.
+Coordinator assigns a volunteer or rescue team.
+Warehouse manager allocates supplies such as food, water, medicine, or tents.
+Volunteer updates status from assigned to in-progress to delivered/resolved.
+Dashboard shows open emergencies, delayed cases, and supply shortages.
+5. Must-Have Features
+Incident report form with location and severity
+Admin/coordinator verification screen
+Duplicate report handling or merge indicator
+Volunteer/rescue assignment flow
+Relief inventory and dispatch tracking
+Status lifecycle for incidents
+Dashboard with active, urgent, assigned, and resolved cases
+6. Optional Advanced Features
+Map-based incident visualization
+AI incident classification
+AI priority scoring
+SMS/WhatsApp style notification mock
+Offline draft report mode
+Situation report generator
+7. Suggested Data Entities
+IncidentReport, Location, Reporter, Volunteer, Assignment, SupplyItem, Warehouse, Dispatch, VerificationRecord, StatusHistory, MediaEvidence.
+8. AI / Agentic AI Opportunities
+Classify incident type from text/image
+Detect possible duplicate incidents
+Estimate urgency/priority
+Summarize situation report for coordinator
+Estimate relief demand based on affected-person count
+9. Safety, Privacy, and Ethics Notes
+Public reports must not expose reporter identity unnecessarily.
+Emergency priority must be explainable and adjustable by human coordinators.
+Fake or duplicate reports should be handled carefully, not deleted blindly.
+Supply dispatch history should be traceable.
+If location is approximate, the system should mark it clearly.
+10. Real-World Edge Cases to Handle
+Same family reported by multiple people
+Fake or old image uploaded
+Volunteer accepts but never reaches site
+Inventory promised but unavailable
+Location is missing or inaccurate
+11. MVP Acceptance Checklist
+Check
+Acceptance Item
+[ ]
+Incident can be submitted with category, severity, and location.
+[ ]
+Coordinator can verify/reject/merge/escalate incident.
+[ ]
+System shows duplicate or nearby report handling.
+[ ]
+Volunteer/rescue team can be assigned to verified case.
+[ ]
+Inventory can be allocated and reduced against the case.
+[ ]
+Status dashboard updates from actual case records.
+12. Recommended Demo Story
+Recommended demo: create a flood rescue report, verify it, show duplicate warning, assign a volunteer, allocate food and water supplies, update delivery status, and open the dashboard to show case counts.
+
+Project 2: Agentic Personal Finance and Micro-Budgeting System for Students
+Domain
+FinTech / Student Life
+Expected Build Type
+Web app, mobile app, desktop app, or hybrid system with an API backend
+AI Status
+Allowed, but controlled, explainable, and optional where possible
+MVP Rule
+One complete end-to-end workflow must work with real data persistence
+1. Problem Statement
+Students often manage small budgets manually and lose track of food, transport, subscriptions, online shopping, and emergency expenses. The challenge is to build a private finance assistant that tracks spending, predicts month-end balance, and gives practical suggestions without exposing sensitive financial data.
+2. Target Users / Roles
+Student user
+Optional financial mentor
+Optional parent/guardian view
+System administrator
+3. Challenge Goal
+Build a budgeting system that helps students log expenses quickly, understand spending patterns, avoid overspending, and track savings goals with privacy-first design.
+4. Required MVP Workflow
+Student sets monthly income/allowance and category budgets.
+Student adds expense manually, through receipt text, or natural language.
+System categorizes the expense and allows user correction.
+System updates remaining budget and spending analytics.
+Forecast engine predicts end-of-month balance.
+System alerts the student when spending crosses limits.
+Monthly report summarizes patterns and suggestions.
+5. Must-Have Features
+Monthly budget setup
+Expense entry and category management
+Auto-category suggestion with user correction
+Budget threshold alerts
+End-of-month balance forecast
+Saving goal tracker
+Weekly or monthly summary report
+6. Optional Advanced Features
+Receipt OCR
+Natural-language expense input
+Shared expense split with friends
+Local-only privacy mode
+Anomaly detection for unusual spending
+AI-generated practical saving suggestions
+7. Suggested Data Entities
+User, Budget, Category, Expense, RecurringExpense, Income, SavingGoal, Forecast, Alert, MonthlyReport.
+8. AI / Agentic AI Opportunities
+Parse natural-language expense entries
+Auto-categorize expenses
+Summarize spending patterns
+Generate saving suggestions
+Detect unusual expenses
+9. Safety, Privacy, and Ethics Notes
+Financial data must be private by default.
+The system must not expose one user budget to another user.
+AI suggestions must be presented as suggestions, not guaranteed financial advice.
+Users should be able to edit or delete financial records.
+Hard-coded API keys or financial credentials are not allowed.
+10. Real-World Edge Cases to Handle
+Cash expense entered late
+Wrong category prediction
+Monthly income changes
+Recurring subscription amount changes
+User wants to delete all data
+11. MVP Acceptance Checklist
+Check
+Acceptance Item
+[ ]
+Student can create monthly budget and categories.
+[ ]
+Student can add expenses and store them persistently.
+[ ]
+System can suggest category and allow correction.
+[ ]
+System calculates remaining category/monthly budget.
+[ ]
+System generates warning/alert when threshold is crossed.
+[ ]
+System shows forecast and monthly report from actual expense data.
+12. Recommended Demo Story
+Recommended demo: create a student budget, add food/transport/subscription expenses, correct one category, trigger an overspending alert, show forecast, and generate a monthly summary report.
+
+Project 3: Agentic Legal Aid and Document Assistant
+Domain
+LegalTech / Document Intelligence
+Expected Build Type
+Web app, mobile app, desktop app, or hybrid system with an API backend
+AI Status
+Allowed, but controlled, explainable, and optional where possible
+MVP Rule
+One complete end-to-end workflow must work with real data persistence
+1. Problem Statement
+People often sign rental agreements, employment contracts, university policies, and legal notices without understanding obligations, deadlines, penalties, or risky clauses. The challenge is to build a document assistant that extracts key clauses, highlights risks, and creates lawyer-review questions without pretending to be a lawyer.
+2. Target Users / Roles
+General user
+Lawyer or legal reviewer
+Case worker
+Organization admin
+3. Challenge Goal
+Build a legal document assistant that helps users understand documents in plain language, trace AI outputs back to source clauses, and request human review where needed.
+4. Required MVP Workflow
+User uploads PDF, DOCX, or text document.
+System extracts document text and sections.
+System identifies parties, dates, money amounts, obligations, penalties, and termination clauses.
+System generates plain-language summary with clause references.
+System flags risky, missing, or ambiguous clauses.
+System generates questions to ask a lawyer.
+Reviewer adds comments and final risk status.
+5. Must-Have Features
+Document upload
+Text extraction or structured text input
+Key entity/clause extraction
+Plain-language summary
+Risk flagging
+Lawyer-review question generation
+Reviewer comments
+Clear disclaimer that output is not legal advice
+6. Optional Advanced Features
+OCR for scanned PDFs
+Version comparison
+Exportable summary PDF
+Multi-language summary
+Clause-by-clause annotations
+Reviewer assignment workflow
+7. Suggested Data Entities
+User, Case, Document, DocumentVersion, Clause, ExtractedEntity, RiskFlag, Summary, LawyerQuestion, ReviewerComment, Export.
+8. AI / Agentic AI Opportunities
+Extract clauses and entities
+Explain legal language in simple words
+Flag risky or missing clauses
+Generate lawyer-review questions
+Compare two document versions
+9. Safety, Privacy, and Ethics Notes
+The app must clearly state that it is not legal advice.
+AI claims should reference clause numbers or source text where possible.
+Users must be able to delete uploaded documents.
+Reviewer comments must be separate from AI output.
+The system must not claim to replace a qualified lawyer.
+10. Real-World Edge Cases to Handle
+Scanned PDF has poor OCR
+AI summarizes a clause incorrectly
+Document has missing signatures
+Document contains mixed languages
+User deletes document after analysis
+11. MVP Acceptance Checklist
+Check
+Acceptance Item
+[ ]
+User can upload or input a legal document.
+[ ]
+System extracts readable text or sections.
+[ ]
+System identifies key parties, dates, amounts, obligations, or clauses.
+[ ]
+System generates summary with source references where possible.
+[ ]
+System flags risks and generates lawyer questions.
+[ ]
+Reviewer can add comments and mark review status.
+12. Recommended Demo Story
+Recommended demo: upload a sample rental/employment agreement, show extracted clauses, highlight one risky clause, generate lawyer questions, add reviewer comment, and export/show final summary.
+
+Project 4: Mental Health Early Support and Referral Platform
+Domain
+Student Wellbeing / Safety-Critical AI
+Expected Build Type
+Web app, mobile app, desktop app, or hybrid system with an API backend
+AI Status
+Allowed, but controlled, explainable, and optional where possible
+MVP Rule
+One complete end-to-end workflow must work with real data persistence
+1. Problem Statement
+Students may struggle with stress, anxiety, burnout, or isolation but avoid direct help. The challenge is to build a privacy-aware support system that offers mood tracking, guided resources, and counselor referral while clearly handling safety boundaries.
+2. Target Users / Roles
+Student
+Counselor
+University wellbeing office
+Optional emergency contact
+Admin
+3. Challenge Goal
+Build a safe student wellbeing platform that encourages early support, protects sensitive data, avoids diagnosis claims, and routes high-risk cases to human support.
+4. Required MVP Workflow
+Student creates private mood check-in.
+Student optionally writes journal entry with privacy controls.
+System provides safe reflection and non-diagnostic resources.
+If risk language is detected, system shows emergency guidance and referral options.
+Student requests counselor appointment or support referral.
+Counselor views only consented information.
+Dashboard shows anonymized wellbeing trends only.
+5. Must-Have Features
+Mood check-in
+Private journaling
+Resource library
+Safe AI reflection or prompt suggestion
+Risk escalation message
+Counselor referral request
+Consent/privacy controls
+Anonymized dashboard or summary
+6. Optional Advanced Features
+Weekly mood summary
+Appointment scheduling
+Anonymous support mode
+Emergency contact workflow
+Counselor note drafts
+Configurable risk rules
+7. Suggested Data Entities
+Student, MoodCheckIn, JournalEntry, Resource, RiskFlag, Counselor, ReferralRequest, Appointment, ConsentRecord, SafetyLog, AnonymizedMetric.
+8. AI / Agentic AI Opportunities
+Generate supportive journaling prompts
+Recommend resources
+Detect risk language
+Summarize weekly mood pattern
+Draft counselor note after human review
+9. Safety, Privacy, and Ethics Notes
+The system must not diagnose users.
+AI must not claim to be a therapist or doctor.
+High-risk language must trigger human/emergency guidance.
+Counselors should view only consented data.
+Private journal entries must be deletable.
+Anonymized dashboards must not reveal individual identity.
+10. Real-World Edge Cases to Handle
+Student writes crisis message
+False positive risk flag
+Student refuses counselor referral
+Counselor tries to access data without consent
+AI gives overconfident advice
+11. MVP Acceptance Checklist
+Check
+Acceptance Item
+[ ]
+Student can submit mood check-in and journal entry.
+[ ]
+System stores records privately.
+[ ]
+System returns safe, non-diagnostic reflection/resource suggestion.
+[ ]
+Risk escalation appears for high-risk input.
+[ ]
+Student can request counselor referral.
+[ ]
+Privacy/consent controls affect what counselor can view.
+12. Recommended Demo Story
+Recommended demo: log a normal mood check-in, add a journal entry, show safe AI reflection, then submit a high-risk sample entry to trigger emergency guidance and create counselor referral with consent controls.
+
+Project 5: Blood Donation Emergency Matching System
+Domain
+Health Logistics / Emergency Matching
+Expected Build Type
+Web app, mobile app, desktop app, or hybrid system with an API backend
+AI Status
+Allowed, but controlled, explainable, and optional where possible
+MVP Rule
+One complete end-to-end workflow must work with real data persistence
+1. Problem Statement
+Emergency blood requests spread randomly through WhatsApp and social media, often with outdated information and no donor eligibility check. The challenge is to create a verified matching system that connects urgent requests with eligible nearby donors while protecting donor privacy.
+2. Target Users / Roles
+Patient attendant
+Donor
+Hospital verifier
+Blood bank
+Volunteer coordinator
+Admin
+3. Challenge Goal
+Build a verified blood donation matching system that handles donor eligibility, request verification, privacy-preserving consent, and fulfillment tracking.
+4. Required MVP Workflow
+Donor registers with blood group, location, availability, and last donation date.
+Patient attendant creates emergency request with hospital and required units.
+Hospital or admin verifies the request.
+System matches eligible nearby donors using blood group, distance, availability, and cooldown.
+Donor receives request and accepts or declines.
+Coordinator tracks contacted, committed, donated, fulfilled, or expired status.
+Expired or fulfilled requests are automatically closed or marked closed.
+5. Must-Have Features
+Donor registration
+Blood request creation
+Admin/hospital verification
+Eligibility and cooldown logic
+Donor matching engine
+Consent before contact sharing
+Fulfillment tracking
+Donation/request history
+6. Optional Advanced Features
+Blood group compatibility matrix
+Distance-based matching
+Notification mock service
+Duplicate request detection
+No-show risk estimation
+Impact dashboard
+7. Suggested Data Entities
+Donor, BloodGroup, Availability, DonationHistory, BloodRequest, Hospital, Verification, DonorMatch, Consent, Notification, FulfillmentStatus.
+8. AI / Agentic AI Opportunities
+Prioritize donors
+Classify request urgency
+Detect duplicate requests
+Generate verified request message
+Estimate no-show risk
+9. Safety, Privacy, and Ethics Notes
+Donor contact must remain hidden until consent is given.
+Requests should be verified before wide broadcast.
+Eligibility/cooldown rules must be explainable and configurable.
+Expired or fulfilled requests should not keep circulating.
+Sensitive patient/donor details must be role-restricted.
+10. Real-World Edge Cases to Handle
+Donor recently donated
+Fake request submitted
+Compatible but not exact blood group
+Donor accepts but cannot reach hospital
+Request fulfilled elsewhere but still circulating
+11. MVP Acceptance Checklist
+Check
+Acceptance Item
+[ ]
+Donor can register with blood group, location, availability, and last donation date.
+[ ]
+Patient attendant can create blood request.
+[ ]
+Admin/hospital user can verify the request.
+[ ]
+System matches eligible donors based on rules.
+[ ]
+Donor can accept/decline before contact is revealed.
+[ ]
+Coordinator can update fulfillment status and close request.
+12. Recommended Demo Story
+Recommended demo: register donors, create urgent blood request, verify it, show eligible matches, collect donor consent, update committed/donated status, and close request as fulfilled.
+
+Demo Day Instructions
+Each team should prepare a focused technical demo. Do not spend most of the time on motivational explanation. Show the working system, explain your design, and answer questions honestly.
+Part
+Recommended Time
+What to Show
+Problem and users
+1 minute
+Which project you selected and who the users are
+Working MVP demo
+5 minutes
+One complete end-to-end workflow
+Architecture explanation
+2 minutes
+Frontend, backend, database, AI/external services, storage
+Limitations and future scope
+1 minute
+What is completed, mocked, and future work
+Judge Q&A
+2-5 minutes
+Technical questions, code explanation, design trade-offs
+Common Judge Questions Teams Should Prepare For
+Why did you choose this architecture?
+Where is your business logic implemented?
+Show your database schema and explain important relationships.
+What happens when an API call or AI service fails?
+Which part is completed and which part is mocked?
+What did AI help you generate, and what did your team implement or modify?
+How did you handle privacy and security?
+How would you scale this system after the hackathon?
+Show one edge case and how your system handles it.
+Non-Acceptance Conditions
+A project may fail the MVP gate or receive very low evaluation if any of the following issues are present:
+Only static UI/screenshots are submitted.
+The application crashes during basic workflow demo.
+There is no data persistence for a system that clearly requires stored data.
+Core MVP workflow is incomplete.
+Team cannot explain their own code or architecture.
+Sensitive information is exposed carelessly.
+AI is used as a final authority in legal, mental health, emergency, medical, or financial context.
+Repository has no meaningful structure or setup instructions.
+Fake hard-coded dashboards are presented as real functionality.
+Copied code or external resources are not credited.
+Final Team Checklist Before Submission
+Check
+Acceptance Item
+[ ]
+We selected exactly one official project track.
+[ ]
+Our MVP workflow works from start to end.
+[ ]
+Our application stores real data persistently.
+[ ]
+Our README explains setup, features, credentials, and limitations.
+[ ]
+Our repository has clean folder/module structure.
+[ ]
+Our architecture diagram is included.
+[ ]
+Our database schema/ERD is included.
+[ ]
+Our AI usage declaration is included.
+[ ]
+Our sensitive data and role permissions are handled reasonably.
+[ ]
+Our demo data and demo script are prepared.
+[ ]
+We can explain what is completed, mocked, and future scope.
+[ ]
+We can answer technical questions about our code.
+AI Usage Declaration Template
+Teams should fill this section in their README or final submission document.
+Question
+Team Response
+Which AI tools were used?
+
+Was AI used for coding assistance?
+
+Was AI used inside the product as a feature?
+
+Which parts were AI-generated and then modified by the team?
+
+Which AI outputs are mocked, if any?
+
+How can users review or override AI output?
+
+What safety limits/disclaimers are included?
+
+Final Note
+A good hackathon project is not the biggest project. It is the most complete, explainable, maintainable, and useful MVP. Build less if needed, but build it properly.
+
+JUDGES MARKING SHEET
+Six judges should enter marks in their own column. Use the rubric numbers below. Final score can be averaged or finalized by the judging panel.
+Team Name
+
+Project No.
+
+Project Title
+
+Evaluation Date
+
+MVP Gate
+[ ] Pass   [ ] Fail
+Final Decision
+[ ] Shortlist   [ ] Normal   [ ] Not Accepted
+
+Rubric No.
+Judge 1
+Judge 2
+Judge 3
+Judge 4
+Judge 5
+Judge 6
+Rubric 1
+
+
+
+
+
+
+Rubric 2
+
+
+
+
+
+
+Rubric 3
+
+
+
+
+
+
+Rubric 4
+
+
+
+
+
+
+Rubric 5
+
+
+
+
+
+
+Rubric 6
+
+
+
+
+
+
+Rubric 7
+
+
+
+
+
+
+Rubric 8
+
+
+
+
+
+
+TOTAL
+
+
+
+
+
+
+
+Final Average Score
+________ / 100
+Rank / Position
+____________________
+Lead Judge Signature
+____________________
+Organizer Verification
+____________________
+
+
+Notes:_______________________________________________________________________________________________________________________________
+
+
+_______________________________________________________________________
