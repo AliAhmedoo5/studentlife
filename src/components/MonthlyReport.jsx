@@ -149,7 +149,7 @@ export default function MonthlyReport({ data }) {
 
         {/* Actionable Savings Takeaways */}
         <div className="glass-card" style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-          <h3 style={{ fontWeight: 600 }}>AI Savings Takeaways</h3>
+          <h3 style={{ fontWeight: 600 }}>Savings Takeaways</h3>
 
           <div style={{ padding: '1rem', borderRadius: 'var(--radius-md)', background: 'rgba(255, 255, 255, 0.01)', border: '1px solid var(--border-glass)' }}>
             <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', textTransform: 'uppercase' }}>Highest Cost Driver</div>
