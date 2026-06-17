@@ -26,7 +26,29 @@ export default function ExpenseTracker({ data, onAddExpense, onDeleteExpense, sh
     setParsedExpense(null);
     try {
       const result = await apiParseExpense(nlpText);
-      setParsedExpense(result);
+      
+      // Smart category mapping for custom user categories
+      let matchedCategory = result.category;
+      const validCategories = data.categories.map(c => c.name.toLowerCase());
+      
+      if (!validCategories.includes(matchedCategory.toLowerCase())) {
+        // If the backend's generic category isn't in the user's custom list,
+        // check if any of the user's custom categories are mentioned explicitly in the text.
+        const textLower = nlpText.toLowerCase();
+        const customMatch = data.categories.find(c => textLower.includes(c.name.toLowerCase()));
+        
+        if (customMatch) {
+          matchedCategory = customMatch.name;
+        } else {
+          // Fallback to the first available category
+          matchedCategory = data.categories.length > 0 ? data.categories[0].name : 'Other';
+        }
+      } else {
+        // Ensure exact case matching for the dropdown to select properly
+        matchedCategory = data.categories.find(c => c.name.toLowerCase() === matchedCategory.toLowerCase()).name;
+      }
+      
+      setParsedExpense({ ...result, category: matchedCategory });
     } catch (error) {
       console.error('NLP Parsing failed', error);
       showToast('Could not parse text. Please check the backend.', 'error', '⚠️');
